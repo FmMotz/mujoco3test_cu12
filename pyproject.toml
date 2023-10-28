@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "mujoco3test_cu12"
+version = "0.1.0"
+description = ""
+authors = ["None"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.10.12"
+jaxlib = {version = "^0.4.19+cuda12.cudnn89", source = "jax"}
+nvidia-cudnn-cu12 = "8.9.4.25"
+jax = {extras = ["cuda12-pip"], version = "^0.4.19"}
+mujoco-mjx = "^3.0.0"
+
+
+[[tool.poetry.source]]
+name = "jax"
+url = "https://storage.googleapis.com/jax-releases/jax_cuda_releases.html"
+priority = "primary"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
